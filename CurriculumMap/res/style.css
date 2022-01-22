@@ -1,0 +1,48 @@
+MainWindow{
+background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #ACD1E9, stop:1 white);
+}
+
+QTextEdit{
+background: white;
+}
+
+QGraphicsView{
+background:white;
+}
+
+QPushButton {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+QPushButton:pressed, QPushButton:checked {
+    border: 1px solid #3a8ee6;
+    color: #409eff;
+}
+
+QTextBrowser{
+    background:transparent;
+}
+
+Line{
+    color:black;
+}
+
+QWidget#side_widget{
+    background:#ACD1E9;
+}
+
+QWidget#top_widget{
+    background:transparent;
+}
+
+QStatusBar{
+    font-family:Arial;
+}
