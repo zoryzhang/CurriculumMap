@@ -22,12 +22,11 @@ int read_csv(QString dir)
 #ifdef Q_OS_MACOS
     QString filename = dir+"/../../../courses.csv";
 #else
-    QString filename = dir+"/../../courses.csv";
+    QString filename = dir+"/courses.csv";
 #endif
-    
+
     std::ifstream ifs;
     ifs.exceptions ( std::ifstream::failbit | std::ifstream::badbit );
-    cout << "fuck" << endl;
     try
     {
         ifs.open(filename.toStdString());
@@ -35,6 +34,7 @@ int read_csv(QString dir)
     catch (std::ifstream::failure e)
     {
         cout << "IO Error" << endl;
+        QMessageBox::warning(nullptr,"Meet some problem","Can't open the file courses.csv !");
         exit(0);
     }
 
