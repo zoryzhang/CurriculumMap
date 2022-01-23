@@ -1,7 +1,5 @@
 /*
-
 This part of the code is used to read the generated csv file.
-
 */
 
 #include <iostream>
@@ -17,70 +15,68 @@ using namespace std;
 #include "global.h"
 
 
-namespace Global{
-int read_csv(QString dir)
+namespace Global
 {
-
-    FILE *file;
-    int all_course_num; 
-    int return_from_fgetc;
-    char test_in[10000];
-
-    #ifdef Q_OS_MACOS
+int read_csv(QString dir)
+{   
+#ifdef Q_OS_MACOS
     QString filename = dir+"/../../../courses.csv";
-    #else
+#else
     QString filename = dir+"/../../courses.csv";
-    #endif
-    if ((file = fopen(filename.toStdString().c_str(), "r")) == NULL)
+#endif
+    
+    std::ifstream ifs;
+    ifs.exceptions ( std::ifstream::failbit | std::ifstream::badbit );
+    cout << "fuck" << endl;
+    try
     {
-        QMessageBox::warning(nullptr,"Meet some problem","Can't open the file courses.csv !");
+        ifs.open(filename.toStdString());
+    }
+    catch (std::ifstream::failure e)
+    {
+        cout << "IO Error" << endl;
         exit(0);
     }
 
-    //read Stastic_use_course_num
-    fscanf(file, "%[^,\n]" , test_in); 
-    fgetc(file); 
-    fscanf(file, "%[^,\n]" , test_in); 
-    fgetc(file);
+    int all_course_number;
+    string buffer;
 
-    all_course_num = QString(test_in).toInt() ;
+    // 1st line
+    getline(ifs, buffer, ',');
+    ifs >> all_course_number;
+    // 1st line rest
+    getline(ifs, buffer, '@');
+    getline(ifs, buffer);
+    // 2nd line
+    getline(ifs, buffer, '@');
+    getline(ifs, buffer);
 
-    //read Space
-    for(int i = 0; i < 8; i++)
+    // courses line
+    for (int row = 0; row < all_course_number; ++ row)
     {
-        fscanf(file, "%[^,\n]" , test_in); 
-        fgetc(file);
-    }
-
-    //read heads
-    for(int i = 0; i < 10; i++)
-    {
-        fscanf(file, "%[^,\n]" , test_in); 
-        fgetc(file); 
-    }
-
-    //read courses in 11 items
-    for(int i = 0; i < all_course_num; i++)
-    {
-        for (int j = 0; j < 11; j++)
+        // 9 commas, 10 columns
+        getline(ifs, buffer, '@');
+        while (buffer.back() == '\r')
+            buffer.pop_back();
+        //cout << "row : " << row << endl;
+        buffer.append(",");
+        for (int col = 0, i = 0; col < 12; ++ col)
         {
-            fscanf(file, "%[^,\n\"]" , test_in); 
-            return_from_fgetc = fgetc(file);
-
-            //special cases of "" and \r\n in Mac system
-            if(return_from_fgetc == (int)((unsigned char)('\"')))
-            {
-                fscanf(file, "%[^\"]" , test_in); 
-                fgetc(file);
-                return_from_fgetc = fgetc(file);
-                if (return_from_fgetc == (int)((unsigned char)('\r')))
-                    fgetc(file);
-            }
-            
-            Global::input[i][j]=QString(test_in);
-            strcpy(test_in,"");
+            cout << "col : " << col << endl;
+            char delim = ',';
+            int start = i, end = i;
+            if (buffer[i] == '"')
+                start = ++ i, delim = '"';
+            while (buffer[i] != delim) ++ i;
+            end = i;
+            input[row][col] = QString::fromStdString(buffer.substr(start, end - start));
+            ++ i;
+            if (delim == '"') ++ i;
         }
+        getline(ifs, buffer);
     }
-    return all_course_num;
+    ifs.close();
+    
+    return all_course_number;
 }
 }
