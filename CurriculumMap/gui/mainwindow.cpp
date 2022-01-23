@@ -106,12 +106,12 @@ bool MainWindow::check_course()
     //cOmp1021->COMP 1021
     QString name=ui->text_search->text().toUpper();
     if(name.size()>4 and name.at(4)!=' ') name.insert(4,' ');
-    if(Global::dictionary.count(name))
+    if(Global::course_name.count(name))
     {
         ui->text_search->setText(name);
         return 1;
     }
-    QMessageBox::warning(this,"Error :(","No such course(may be postgraduate course, or you may run get_information.py to grub newest version)");return 0;
+    QMessageBox::warning(this,"Error :(","No such course(may be postgraduate/canceled course, or you may run get_information.py to grub newest version)");return 0;
 }
 
 void MainWindow::on_btn_enroll_clicked()

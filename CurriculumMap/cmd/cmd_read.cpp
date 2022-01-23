@@ -4,6 +4,7 @@
 #include <stack>
 #include <map>
 #include <sstream>
+#include <QDebug>
 
 /* Qt Lib*/
 #include <QCryptographicHash>
@@ -172,8 +173,9 @@ PointX* get_pre(const QString& s)
             judge = judge_course(s, len, i);
             if (!judge.isEmpty())
             {
-                children_PointX.push_back(get_dictionary(judge));
-                i += judge.length() - 1;
+                if(Global::course_name.count(judge))
+                    children_PointX.push_back(get_dictionary(judge)),
+                    i += judge.length() - 1;
                 continue;
             }
         }
@@ -300,7 +302,7 @@ void get_list_exclu(int row) //
     for (int i = 0; i < len; ++ i)
     {
         tmp = judge_course(Global::input[row][4], len, i);
-        if (tmp == "") continue;
+        if(!Global::course_name.count(tmp)) continue;
         dynamic_cast<Course*>( get_dictionary(tmp) )->add_exclu(dynamic_cast<Course*>( Global::dictionary[Global::input[row][0]] ));
         i += tmp.length() - 1;
     }
@@ -313,7 +315,7 @@ void get_list_co(int row) //
     for (int i = 0; i < len; ++ i)
     {
         tmp = judge_course(Global::input[row][5], len, i);
-        if (tmp == "") continue;
+        if(!Global::course_name.count(tmp)) continue;
         dynamic_cast<Course*>(Global::dictionary[Global::input[row][0]])->add_co(dynamic_cast<Course*>(get_dictionary(tmp)));
         i += tmp.length() - 1;
     }
@@ -365,11 +367,15 @@ enroll each column to corresponding function
 void build_graph(int total_rows)
 {
     special_case_continuous_course(total_rows);
+    Global::course_name.insert("AND"),Global::course_name.insert("OR");
+    for (int i = 0; i < total_rows; ++ i) Global::course_name.insert(Global::input[i][0]);
     for (int i = 0; i < total_rows; ++ i)
     {
         /* Course Code [0]*/
         Course *now = dynamic_cast<Course*>(get_dictionary(Global::input[i][0]));
         now->set_name(Global::input[i][0]);
+
+        qDebug()<<Global::input[i][0];
 
         /* Course Full Name [1] */
         now->set_fullname(Global::input[i][1]);
@@ -378,6 +384,8 @@ void build_graph(int total_rows)
         now->set_credit(Global::input[i][2]);
 
         /* Handle pre-requisite [3] */
+        if(Global::input[i][0]=="MATH 4632")//only such one so lazy stuff
+            Global::input[i][3] = "(COMP 2011 OR COMP 2012 OR COMP 2012H) AND (COMP 2711 OR COMP 2711H OR MATH 2343) AND (MATH 2111 OR MATH 2121 OR MATH 2131) ";
         now->set_fullpre(Global::input[i][3]);
 
         ignore_info(Global::input[i][3]);

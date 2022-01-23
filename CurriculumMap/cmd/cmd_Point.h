@@ -2,7 +2,7 @@
 cmd_Point.h
 
 it define class PointX as base class of class Course and LogicP
-store common features: name, flags status, edges, varible used by extract()
+store common features: name, flags status, edges, variable used by extract()
 
 layer_val():
 it shows contribute to layer increase

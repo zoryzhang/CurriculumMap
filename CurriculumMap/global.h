@@ -28,13 +28,13 @@ namespace Global
         "Welcome to Curriculum Map!\n"
         "Before start, you shall know it's a tool for visualization of undergraduate courses in Hong Kong University of Science and Technology\n\n"
         "Hints: \n"
-        "for exclusion, if A excludes B, which means you can't take A after B, there will be a red cross near A >_< \n"
-        "A rectangle represents courses inside excludes each other\n"
+        "for exclusion(not always bidirectional), if A excludes B, which means you can't take A after B**(but you may take B after A)**, there will be a red cross near A >_< \n"
+        "A rectangle represents courses inside exclude each other\n"
         "Enrolled flag is helpful in terms of simplifing\n\n"
         "Try some course, click or right click, drag somewhere... enjoy it!";
 
 
-    //global varible
+    //global variable
     extern int button_width,button_height;
     extern int Graph_width,Graph_height;
     extern bool Want_exclu,Want_co,Want_pre;
@@ -43,6 +43,7 @@ namespace Global
     extern map<QString,PointX*> dictionary;
     extern map<QString,PointX*> map_logicp;
     extern QString input[3000][11];
+    extern set<QString> course_name;
 
     extern vector< pair< Course*,Pos > > Course_list;
     extern vector< pair< LogicP*,Pos > > LogicP_list;

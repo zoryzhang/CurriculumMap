@@ -5,7 +5,7 @@ using namespace std;
 
 #include"global.h"
 
-//global varible
+//global variable
 namespace Global
 {
     int button_width=100,button_height=60;
@@ -15,6 +15,7 @@ namespace Global
     map<QString,PointX*> dictionary;
     map<QString,PointX*> map_logicp;
     QString input[3000][11];
+    set<QString> course_name;
 
     vector< pair< Course*,Pos > > Course_list;
     vector< pair< LogicP*,Pos > > LogicP_list;

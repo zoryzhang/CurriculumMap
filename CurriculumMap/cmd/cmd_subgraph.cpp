@@ -21,27 +21,34 @@ void distribute(vector<PointX*> subgraph,vector<Block*> block_list)
         x->layer = mx+x->layer_val();
         if(mx<0) assert(x->layer_val());
     }
-    //2 move backward to reduce size of layer 0
+    //2 move rightward to reduce size of layer 0
     for(int i=(int)subgraph.size()-1;i>=0;i--)
     {
         int mi=100;
         for(auto y:subgraph[i]->get_to()) if(y->visible) mi=min(mi, y->layer - y->layer_val() );
         if(mi!=100) subgraph[i]->layer=mi;
     }
-    //3 move course in block together
+    //3 move course in block together(go rightward)
     for(auto b:block_list)
     {
         int mx=0;for(auto x:b->in) mx=max(mx,x->layer);
         for(auto x:b->in) x->layer=mx;
     }
+    for(auto x:subgraph)//debug
+    {
+        int mx=-1;
+        for(auto y:x->get_from()) if(y->visible) mx=max(mx, y->layer );
+        if(mx+x->layer_val()>x->layer) x->layer = mx+x->layer_val();
+    }
+
     for(auto x:subgraph)
-        if(x->layer_val()==0)//4 move forward logic PointX to make it closer to course PointX
+        if(x->layer_val()==0)//4 move leftward logic PointX to make it closer to course PointX
         {
             int mx=-1;
             for(auto y:x->get_from()) if(y->visible)  mx=max(mx, y->layer );
-            x->layer = mx+x->layer_val();
+            x->layer = mx;
         }
-        else if(x->v1 or x->v2) //5 consider single course but needed by co/exclu from originally visible course
+        else if(x->v1 or x->v2 or x->get_enrolled()) //5 consider single course but needed by co/exclu from originally visible course
         {
             Course* xx=static_cast<Course*>(x);
             if(Global::Want_exclu) for(auto y:xx->get_exclu()) if(y->degree==0 and y->belong==0) y->layer=x->layer;
@@ -53,6 +60,12 @@ void distribute(vector<PointX*> subgraph,vector<Block*> block_list)
             A[x->layer].push_back(static_cast<Course*>(x));
         else
             B[x->layer].push_back(static_cast<LogicP*>(x));
+    for(int i=0;i<19;i++) if(B[i].empty())
+    {
+        for(auto x:A[i+1]) A[i].push_back(x);
+        for(auto x:B[i+1]) B[i].push_back(x);
+        A[i+1].clear(),B[i+1].clear();
+    }
 
     Global::Pos now={0,0};//spare space for exclusion arrow
     const int Width=Global::button_width+100, Height=Global::button_height+30;
