@@ -13,28 +13,31 @@ This part of the code is used to read the generated csv file.
 using namespace std;
 
 #include "global.h"
-
+#include <unistd.h>
 
 namespace Global
 {
-int read_csv(QString dir)
-{   
+int read_csv(QString Dir)
+{
+    string filename = getcwd(NULL,0);
 #ifdef Q_OS_MACOS
-    QString filename = dir+"/../../../courses.csv";
+    filename=(Dir+"/../../courses.csv").toStdString();
+//    Dir.toStdWString()
 #else
-    QString filename = dir+"/courses.csv";
+    filename+="/courses.csv";
 #endif
+    cout << filename << endl;
 
     std::ifstream ifs;
     ifs.exceptions ( std::ifstream::failbit | std::ifstream::badbit );
     try
     {
-        ifs.open(filename.toStdString());
+        ifs.open(filename);
     }
     catch (std::ifstream::failure e)
     {
-        cout << "IO Error" << endl;
-        QMessageBox::warning(nullptr,"Meet some problem","Can't open the file courses.csv !");
+        cout << "IO Error in" << endl;
+        QMessageBox::warning(nullptr,"Meet some problem","Can't open the file : "+QString::fromStdString(filename));
         exit(0);
     }
 
@@ -62,7 +65,7 @@ int read_csv(QString dir)
         buffer.append(",");
         for (int col = 0, i = 0; col < 12; ++ col)
         {
-            cout << "col : " << col << endl;
+//            cout << "col : " << col << endl;
             char delim = ',';
             int start = i, end = i;
             if (buffer[i] == '"')

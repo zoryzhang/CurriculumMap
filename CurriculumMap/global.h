@@ -14,7 +14,6 @@ using namespace std;
 #include "cmd/cmd_Course.h"
 #include "gui/gui_cscene.h"
 
-
 namespace Global
 {
     //global definition
@@ -60,7 +59,7 @@ namespace Global
     extern vector<Arrow*> list_arrow;
 
     //global function
-    extern int read_csv(QString dir);//cmd_get_information.cpp
+    extern int read_csv(QString Dir);//cmd_get_information.cpp
     extern void build_graph(int rows);//cmd_read.cpp
     extern void prepare();//cmd_subgraph.cpp
 

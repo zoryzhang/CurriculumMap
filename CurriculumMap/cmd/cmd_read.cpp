@@ -375,8 +375,6 @@ void build_graph(int total_rows)
         Course *now = dynamic_cast<Course*>(get_dictionary(Global::input[i][0]));
         now->set_name(Global::input[i][0]);
 
-        qDebug()<<Global::input[i][0];
-
         /* Course Full Name [1] */
         now->set_fullname(Global::input[i][1]);
 
