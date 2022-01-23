@@ -2,6 +2,8 @@
 
 A visualization solution for curriculum and course relationships of Hongkong University of Science and Technology(HKUST)
 
+![](./example.png)
+
 Notice: Qt v6.1.1(not creator) and above will be required to compile the code. 
 We haven’t use any third-party library except for Qt library, so just compile it would be fine.
 
