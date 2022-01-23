@@ -179,29 +179,9 @@ def main():
             else:
                 row.append('')
 
+            row.append("@")
             all_row.append(row)
 
-
-    #this is the .xls solution but diffcult to be used in the following codes
-    ''' 
-    all_row_length = len(all_row)
-    book = xlwt.Workbook(encoding='utf-8')
-    sheet = book.add_sheet('test', cell_overwrite_ok=True)
-    print(all_row_length)
-    sheet.write(0,0,"Static_use_course_num = ")
-    sheet.write(0,1,all_row_length)
-    head = ['Course Code', 'Course Name', 'Course Credits', 'Prerequisite(s)', 'Exclusion(s)','Corequisite(s)','Co-list with','Mode of Delivery','Previous Course Code(s)','Alternate code(s)']
-    for h in range(len(head)):
-        sheet.write(1, h, head[h])
-    now_row = 2  # write from first row
-    for course_infolist in all_row:
-        now_col = 0
-        for info_item in course_infolist:
-            sheet.write(now_row, now_col, info_item)  # cell_overwrite_ok = True
-            now_col = now_col + 1
-        now_row = now_row + 1
-    book.save('D:test_data.xls')
-    '''
 
     all_row_length = len(all_row)
     path = "courses.csv"
@@ -209,9 +189,9 @@ def main():
     #supporting Chinese by 'utf-8-sig'
     with open(path,'w',newline = '', encoding="utf-8-sig") as file_csv:
         csv_write = csv.writer(file_csv)
-        csv_stastic_head = ["Stastic_use_course_num = ", str(all_row_length),"","","","","","","",""]
+        csv_stastic_head = ["Stastic_use_course_num = ", str(all_row_length),"","","","","","","","", "@"]
         csv_write.writerow(csv_stastic_head)
-        csv_head = ['Course Code', 'Course Name', 'Course Credits', 'Prerequisite(s)', 'Exclusion(s)','Corequisite(s)','Co-list with','Mode of Delivery','Previous Course Code(s)','Alternate code(s)']
+        csv_head = ['Course Code', 'Course Name', 'Course Credits', 'Prerequisite(s)', 'Exclusion(s)','Corequisite(s)','Co-list with','Mode of Delivery','Previous Course Code(s)','Alternate code(s)', "@"]
         csv_write.writerow(csv_head)
         for sub_list in all_row:
             csv_write.writerow(sub_list)
