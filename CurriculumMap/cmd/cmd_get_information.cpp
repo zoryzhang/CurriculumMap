@@ -21,7 +21,7 @@ int read_csv(QString Dir)
 {
     string filename = getcwd(NULL,0);
 #ifdef Q_OS_MACOS
-    filename=(Dir+"/../../courses.csv").toStdString();
+    filename=(Dir+"/../../../courses.csv").toStdString();
 //    Dir.toStdWString()
 #else
     filename+="/courses.csv";

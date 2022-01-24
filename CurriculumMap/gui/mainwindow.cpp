@@ -119,8 +119,9 @@ void MainWindow::on_btn_enroll_clicked()
     if(!check_course()) return;
     Global::dictionary[ui->text_search->text()]->enroll();
     QListWidgetItem* p=new QListWidgetItem{ui->text_search->text() + Global::ENROLLED};
-    Global::listwidget->addItem(p);ui->listwidget->itemClicked(p);
+    Global::listwidget->addItem(p);
     cscene->Repaint_Map();
+    emit ui->listwidget->itemClicked(p);
 }
 
 void MainWindow::on_btn_search_clicked()
@@ -128,8 +129,9 @@ void MainWindow::on_btn_search_clicked()
     if(!check_course()) return;
     Global::dictionary[ui->text_search->text()]->search();
     QListWidgetItem* p=new QListWidgetItem{ui->text_search->text() + Global::SEARCHED};
-    Global::listwidget->addItem(p);ui->listwidget->itemClicked(p);
+    Global::listwidget->addItem(p);
     cscene->Repaint_Map();
+    emit ui->listwidget->itemClicked(p);
 }
 
 void MainWindow::on_btn_search_2_clicked()
@@ -137,8 +139,9 @@ void MainWindow::on_btn_search_2_clicked()
     if(!check_course()) return;
     Global::dictionary[ui->text_search->text()]->reverse_search();
     QListWidgetItem* p=new QListWidgetItem{ui->text_search->text() + Global::R_SEARCHED};
-    Global::listwidget->addItem(p);ui->listwidget->itemClicked(p);
+    Global::listwidget->addItem(p);
     cscene->Repaint_Map();
+    emit ui->listwidget->itemClicked(p);
 }
 
 void MainWindow::on_btn_clear_clicked()
