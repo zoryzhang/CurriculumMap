@@ -2,6 +2,10 @@
 
 A visualization solution for curriculum and course relationships of Hongkong University of Science and Technology(HKUST)
 
+[![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-win.zip?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
+
+[![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-mac.dmg?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
+
 ![](./example.png)
 
 Notice: Qt v6.1.1(not creator) and above will be required to compile the code. 
