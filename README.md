@@ -54,3 +54,5 @@ ZHANG, Yujun
 
 
 insteresting course code: BIEN3320
+
+![GitHub all releases](https://img.shields.io/github/downloads/Zory123/CurriculumMap/total)
