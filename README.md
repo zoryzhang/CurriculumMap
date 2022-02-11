@@ -10,6 +10,8 @@ A visualization solution for curriculum and course relationships of Hongkong Uni
 
 [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-mac.dmg?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
 
+[![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-linux.zip?color=green)]((https://github.com/Zory123/CurriculumMap/releases/tag/v1.0))
+
 If you think the courses.csv (in get-information folder) is old, you could run `/get-information/get-information.py` to get the newest one. 
 
 p.s. the url is set through `base_url = ['https://prog-crs.ust.hk/ugcourse/2021-22/']`
