@@ -12,11 +12,13 @@ A visualization solution for curriculum and course relationships of the Hong Kon
   - Linux [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-linux.zip?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
 - Download `courses.csv` and replace `/get-information/courses.csv`
   - The ones contained in above three files are for 2021-22, and the new `courses.csv` is for 2022-23
-- (Optional) Download `get-information.py` and replace `/get-information/get-information.py`. If you think the  `/get-information/courses.csv` is obsolete and want to update it manually, please run (no need to set the url)
+- (Optional) Download `get-information.py` and replace `/get-information/get-information.py`. If you think the  `/get-information/courses.csv` is obsolete and want to update it manually, please run (no need to set the url in the code)
   ```shell
-  python /get-information/get-information.py
+  cd get-information/
+  mv courses.csv courses-old.csv
+  python get-information.py
   ```
-  - If you want to update using the old `/get-information/get-information.py`, please modify the code by setting `base_url` (e.g., `= ['https://prog-crs.ust.hk/ugcourse/2021-22/']`)
+  - Do not use the old `/get-information/get-information.py`, which is only for 2021-22.
 
 ## Building
 
