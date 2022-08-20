@@ -1,4 +1,4 @@
-﻿Stastic_use_course_num = ,1402,,,,,,,,,@
+﻿1401,54,,,,,,,,@
 Course Code,Course Name,Course Credits,Prerequisite(s),Exclusion(s),Corequisite(s),Co-list with,Mode of Delivery,Previous Course Code(s),Alternate code(s),@
 ACCT 1010,Accounting@ Business and Society,3 Credit(s),,ACCT 2010,,,,,,Overview of accounting in business and social contexts; use of accounting information for accountability and decision making in companies@ non-profit organizations@ and government; major elements of accounting@ including assets@ liabilities@ revenues and expenses; discharge of accountability by companies through corporate social and environmental reports.,@
 ACCT 1610,Laws in Society and Business,3 Credit(s),,ACCT 3610,,,,,,This course provides an introduction to law and business society. Topics include general introduction to the concepts in law; an introduction to the Hong Kong legal system under the principle of $one country@ two systems$; copyright law; trademark law; agency law; insolvency law; employment law and business ethics. As Hong Kong is a well-developed business society@ this course is intended to build students# understanding of the relationship between the law and the society and discuss laws in society and business.,@
@@ -237,7 +237,7 @@ COMP 4021,Internet Computing,3 Credit(s),COMP 2012 OR COMP 2012H,,,,,,,Technolog
 COMP 4111,Software Engineering Practices,3 Credit(s),COMP 3111 OR COMP 3111H,,,,,,,This course provides students with the exposure of effective real-world software engineering practices and the underlying concepts via working around a realistic modern software system and applying popular tools and practices in industry. Students will gain experience in collaborative software development as well as the skills required to succeed as software professional. Topics of the course cover advanced software engineering concepts@ project setup@ code management@ testing@ defect analysis@ quality metrics@ and issue management. For students of the Department of Computer Science and Engineering only.,@
 COMP 4211,Machine Learning,3 Credit(s),(COMP 2012 OR COMP 2012H) AND (ELEC 2600 OR IEDA 2510 (prior to 2018-19) OR IEDA 2520 OR IEDA 2540 OR ISOM 2500 OR LIFS 3150 OR MATH 2411 OR MATH 2421 OR MATH 2431),COMP 4331@ COMP 5212@ ISOM 3360,,,,,,Fundamentals of machine learning. Concept learning. Evaluating hypotheses. Supervised learning@ unsupervised learning and reinforcement learning. Bayesian learning. Ensemble Methods. Deep learning.,@
 COMP 4221,Introduction to Natural Language Processing,3 Credit(s),ELEC 2600 OR IEDA 2510 (prior to 2018-19) OR IEDA 2520 OR IEDA 2540 OR MATH 2411 OR MATH 2421 OR MATH 2431,COMP 5221,,,,,,Human language technology for text and spoken language. Machine learning@ syntactic parsing@ semantic interpretation@ and context-based approaches to machine translation@ text mining@ and web search.,@
-COMP 4222,Machine Learning with Structured Data,3 Credit(s),(COMP 2011 OR COMP 2012 OR COMP 2012H) AND (COMP 2711 OR COMP 2711H OR MATH 2343) AND (MATH 2111 OR MATH 2121 OR MATH 2131),MATH 4632,,,,COMP 4901K,MATH 4632,This course provides an introduction to statistical machine learning algorithms for structured data such as text sequences@ taxonomy trees@ relational databases (such as knowledge bases)@ and graphs (including graph databases such as biomedical graphs and large heterogeneous information networks such as knowledge graphs)@ and using programming tools such as Python to implement them for real problems. It will use some of the following practical problems such as text and graph classification@ statistical relational learning@ information extraction@ sequence modeling@ graph modeling@ protein 3D structure prediction@ QA system@ etc. as illustrations to demonstrate the power of the statistical learning algorithms.,@
+COMP 4222,Machine Learning with Structured Data,3 Credit(s),(COMP 2011 OR COMP 2012 OR COMP 2012H) AND (COMP 2711 OR COMP 2711H OR MATH 2343) AND (MATH 2111 OR MATH 2121 OR MATH 2131),MATH 4632,,,,COMP 4901K,,This course provides an introduction to statistical machine learning algorithms for structured data such as text sequences@ taxonomy trees@ relational databases (such as knowledge bases)@ and graphs (including graph databases such as biomedical graphs and large heterogeneous information networks such as knowledge graphs)@ and using programming tools such as Python to implement them for real problems. It will use some of the following practical problems such as text and graph classification@ statistical relational learning@ information extraction@ sequence modeling@ graph modeling@ protein 3D structure prediction@ QA system@ etc. as illustrations to demonstrate the power of the statistical learning algorithms.,@
 COMP 4321,Search Engines for Web and Enterprise Data,3 Credit(s),COMP 2011 OR  COMP 2012 OR COMP 2012H,,,,,,,Text retrieval models@ vector space model@ document ranking@ performance evaluation; indexing@ pattern matching@ relevance feedback@ clustering; web search engines@ authority-based ranking; enterprise data management@ content creation@ meta data@ taxonomy@ ontology; semantic web@ digital libraries and knowledge management applications.,@
 COMP 4331,Data Mining,3 Credit(s),ELEC 2600 OR IEDA 2510 (prior to 2018-19) OR IEDA 2520 OR IEDA 2540 OR ISOM 2500 OR LIFS 3150 OR MATH 2411 OR MATH 2421 OR MATH 2431,COMP 4211@ ISOM 3360,,,,,,This course will provide an introduction to concepts and techniques in the field of data mining. Materials include an introduction to data warehousing and OLAP@ data preprocessing and the techniques used to explore the large quantities of data for the discovery of predictive models and knowledge. The course will include techniques such as nearest neighbor@ decision tress@ neural networks@ Bayesian networks and Naive Bayes@ rule-based methods@ association analysis and clustering@ as well as social networks and data mining applications in business and finance applications@ and other emerging data mining subareas. Students learn the materials by attending lectures and implementing and applying different data analysis and mining techniques to large datasets throughout the semester.,@
 COMP 4332,Big Data Mining and Management,3 Credit(s),COMP 4211 OR COMP 4331 OR ISOM 3360,,,RMBI 4310,,,,This course will expose students to new and practical issues of real world mining and managing big data. Data mining and management is to effectively support storage@ retrieval@ and extracting implicit@ previously unknown@ and potentially useful knowledge from data. This course will place emphasis on two parts. The first part is big data issues such as mining and managing on distributed data@ sampling on big data and using some cloud computing techniques on big data. The second part is applications of the techniques learnt on areas such as business intelligence@ science and engineering@ which aims to uncover facts and patterns in large volumes of data for decision support. This course builds on basic knowledge gained in the introductory data-mining course@ and explores how to more effectively mine and manage large volumes of real-world data and to tap into large quantities of data. Working on real world data sets@ students will experience all steps of a data-mining and management project@ beginning with problem definition and data selection@ and continuing through data management@ data exploration@ data transformation@ sampling@ portioning@ modeling@ and assessment.,@
@@ -1026,7 +1026,6 @@ MATH 4511,Quantitative Methods for Fixed Income Derivatives,3 Credit(s),(MATH 20
 MATH 4512,Fundamentals of Mathematical Finance,3 Credit(s),(MATH 2011 / MATH 2023) AND (MATH 2111 / MATH 2121 / MATH 2131 / MATH 2350) AND (IEDA 2540 / ISOM 2500 / LIFS 3150 / MATH 2411) AND (MATH 2511 / FINA 2203 / FINA 2303),,,,,,,Duration and horizon rate of return@ bond portfolio management and immunization; mean-variance formulation of portfolio choices of risky assets; Two-fund theorem and One-fund theorem; asset pricing under the capital asset pricing models and factor models; investment performance analysis; utility optimization in investment decisions; stochastic dominance.,@
 MATH 4513,Life Contingencies Models and Insurance Risk,3 Credit(s),ELEC 2600 OR ISOM 3540 OR MATH 2421 OR MATH 2431,,,,,,RMBI 4220,The topics discussed in this course include survival models@ life tables and selection@ insurance benefits@ annuities@ premium calculation@ and insurance policy values.,@
 MATH 4514,Financial Economics in Actuarial Science,3 Credit(s),(MATH 2421 OR MATH 2431) AND MATH 2511,FINA 3203,,,,,,The course aims to study some actuarial models and their applications in derivative pricing and financial risk management. Topics include introduction to various derivatives such as forward@ futures@ European/ American options@ exotic options and interest rate derivatives@ uses of various options strategies in portfolio management@ pricing options using binomial tree model@ Black Scholes formula for options pricing and its extension@ Options Greeks and their applications in hedging@ use of Monte Carlo simulation in options pricing@ pricing of interest rate derivatives using the Black-Derman-Toy tree. The course also prepares students to take the Exam MFE (Models for Financial Economics) of the Society of Actuaries.,@
-MATH 4632,Machine Learning with Structured Data,3 Credit(s),(COMP 2011/2012/2012H) AND (COMP 2711/2711H OR MATH 2343) AND (MATH 2111/2121/2131),COMP 4222,,,,MATH 4824B,COMP 4222,This course provides an introduction to statistical machine learning algorithms for structured data such as text sequences@ taxonomy trees@ relational databases (such as knowledge bases)@ and graphs (including graph databases such as biomedical graphs and large heterogeneous information networks such as knowledge graphs)@ and using programming tools such as Python to implement them for real problems. It will use some of the following practical problems such as text and graph classification@ statistical relational learning@ information extraction@ sequence modeling@ graph modeling@ protein 3D structure prediction@ QA system@ etc. as illustrations to demonstrate the power of the statistical learning algorithms.,@
 MATH 4821,Special Topics,1-4 Credit(s),,,,,,,,Focuses on a coherent collection of topics selected from a particular branch of mathematics. A student may repeat the course for credit if the topics studied are different each time.,@
 MATH 4822,Special Topics in Pure Mathematics,1-4 Credit(s),,,,,,,,Supplementary study of specialized topics for students of pure mathematics.,@
 MATH 4823,Special Topics in Applied Mathematics,1-4 Credit(s),,,,,,,,Supplementary study of specialized topics for students of applied mathematics.,@
@@ -1419,3 +1418,57 @@ WBBA 2020,Seminars in Asia#s Business,1 Credit(s),WBBA 2010,,,,,,,This is a comp
 WBBA 2030,Effective Communication in Business,3 Credit(s),,,,,,,,Whether making a presentation@ creating and executing an integrated persuasive appeal@ or engaging in group problem solving - students should be able to convey ideas and feelings to their audience clearly@ accurately@ and persuasively. The course is designed to provide second-year WBB students with the necessary communication skills to analyze and convincingly present solutions to the type of real-world problems that they will face as managers in their career. They will learn the necessary skills they need to solve business problems and make professional presentations. At the end of this course@ students will be a more articulate and influential business communicator@ and their existing skills as a strategic thinker@ writer@ and speaker will be sharpened. For WBB students in their second year of study.,@
 WBBA 2080,Doing Business in Asia,3 Credit(s),,WBBA 2010@ WBBA 2020,,,,,,This course explores the way key business and managerial practices play out in an Asian context. To be a successful business leader@ students must possess not only the technical skills and knowledge@ but also be able to deal with regional and international business issues independently. Therefore@ this course provides a big-picture overview of the business framework in Asia@ a platform for students to interact with leading business leaders to learn from their professional experience and obtain first-hand information of the market@ as well as practical training on evaluating challenges and opportunities in doing business in Asia through a cross-disciplinary approach. This course intends to cover topical issues in marketing@ management@ accounting@ information systems@ economics@ finance@ etc. Through experiential exercises@ case studies and class presentations@ students are expected to apply their business knowledge to tackle global and regional business problems with a critical eye.,@
 WBBA 4010,Capstone Project,4 Credit(s),WBBA 2010 AND WBBA 2020,,,,,,,For WBB students only. This course is designed to provide final year WBB students with an opportunity to pursue business studies above and beyond the normal course offerings of HKUST Business School. Students will work on a challenging individual or team capstone project which allows them to 1) conduct empirical research@ and 2) synthesize skills and knowledge learned from the program.,@
+ACCT
+BIBU
+BIEN
+BIPH
+CENG
+CHEM
+CIVL
+COMP
+CORE
+CPEG
+DASC
+DSCT
+ECON
+ELEC
+EMIA
+ENEG
+ENGG
+ENTR
+ENVR
+ENVS
+FINA
+FYTG
+GBUS
+GNED
+HART
+HLTH
+HUMA
+IDPO
+IEDA
+IIMP
+IROP
+ISDN
+ISOM
+LABU
+LANG
+LEGL
+LIFS
+MARK
+MATH
+MECH
+MGMT
+OCES
+PHYS
+PPOL
+RMBI
+SBMT
+SCIE
+SHSS
+SISP
+SOSC
+SUST
+TEMG
+UROP
+WBBA
