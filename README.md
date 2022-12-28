@@ -2,13 +2,18 @@
 
 A visualization solution for curriculum and course relationships of the Hong Kong University of Science and Technology (HKUST) [![GitHub all releases](https://img.shields.io/github/downloads/Zory123/CurriculumMap/total)](https://github.com/zory233/CurriculumMap/releases)
 
-![](./example.png)
+A nice web-based re-implementation can be found
+[here](https://github.com/ZHANG-Zhong-HKUST/CurriculumMap-Web).
+
+![Screenshot](./example.png)
 
 ## Installation
 
 - Download the program
   - Windows [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-win.zip?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
-  - macOS [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-mac.dmg?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
+  - macOS [![GitHub release (latest by date and
+    asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-mac.dmg?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
+    (obsolete, you may check the web application above)
   - Linux [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-linux.zip?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
 - Download `courses.csv` and replace `/get-information/courses.csv`
   - The ones contained in above three files are for 2021-22, and the new `courses.csv` is for 2022-23
@@ -71,9 +76,3 @@ WANG, Yucheng
 WANG, Yicheng
 
 ZHANG, Yujun
-
-
-
-
-
-
