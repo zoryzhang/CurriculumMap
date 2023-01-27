@@ -9,6 +9,8 @@ This part of the code is used to read the generated csv file.
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QObject>
+#include<QCoreApplication>
+#include<QDir>
 
 using namespace std;
 
@@ -21,13 +23,15 @@ int read_csv(QString Dir)
 {
     string filename = getcwd(NULL,0);
 #ifdef Q_OS_MACOS
-    filename=(Dir+"/../../courses.csv").toStdString();
-//    Dir.toStdWString()
+    // Dir := QCoreApplication::applicationDirPath() is the the path of
+    // the directory that contains the application executable;
+    // While filename = cwd is athe bsolute path of
+    // the current directory of the current running process
+    filename=(Dir + "/courses.csv").toStdString();
 #else
     filename+="/courses.csv";
 #endif
     cout << filename << endl;
-
     std::ifstream ifs;
     ifs.exceptions ( std::ifstream::failbit | std::ifstream::badbit );
     try

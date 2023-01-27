@@ -33,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
     splitter->setChildrenCollapsible(false);//avoid size to be 0
 
     //status bar
-    ui->statusbar->showMessage("CURRICULUMMAP @COMP2012H GROUP PROJECT 2021-22");
+    ui->statusbar->showMessage("CurriculumMap @ COMP2012H Group Project 2021-22 https://github.com/zory233/CurriculumMap");
 
     //settings
     QSettings settings("CurriculumMap","CurriculumMap");
