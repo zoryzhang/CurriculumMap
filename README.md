@@ -22,13 +22,10 @@ A nice web-based re-implementation can be found
 3. Go to the executable directory and run the program:
    - For Windows: Run `CurriculumMap-win/CurriculumMap.exe`.
    - For Linux: Run `CurriculumMap-linux/CurriculumMap.sh`.
-   - For macOS: Run `CurriculumMap.app`
+   - For macOS: Run `CurriculumMap-mac/CurriculumMap`
 4. (Optional) Update the course information.
    1. First get the newest version of `courses.csv` by running `python
-     get-information.py`. To find `get-information.py`:
-      - For Windows and Linux, you can see it in the root directory.
-      - For macOS, first right click on `CurriculumMap.app` and click "Show Package
-   Contents", then go to `Contents/MacOS/`.
+     get-information.py`. `get-information.py` is alongside the executable:
    2. Then replace the `courses.csv` coming with the package (alongside
      `get-information.py`) with the one you just generated.
 
@@ -87,18 +84,9 @@ Dependencies: Qt Kit v6.1.1 and above (not the creator's version).
 ### Deploying
 
 1. Build the project with "Release" mode.
-2. Put `./get-information/courses.csv` as well as
-   `./get-information/get-information.py` in the directory `CurriculumMap.app/Contents/MacOS/`.
-3. Deploy according to the OS.
-   - For macOS: locate the `macdeployqt` tool. It comes along with the Qt
-     package, and is usually in `~/Qt/<version>/macos/bin/macdeployqt`. Run this
-     tool against the built project:
-     ```shell
-     cd build-...
-     ~/Qt/6.4.1/macos/bin/macdeployqt CurriculumMap.app
-     ```
-
-### 
+2. Run "Deploy" from the "Build" menu.
+2. Zip `./get-information/courses.csv` as well as
+   `./get-information/get-information.py` with the generated executable
 
 ## Contributor:
 
