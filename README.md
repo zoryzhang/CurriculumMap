@@ -2,7 +2,7 @@
 
 ![Screenshot](./example.png)
 
-A visualization solution for curriculum and course dependencies of the Hong Kong University of Science and Technology (HKUST) [![GitHub all releases](https://img.shields.io/github/downloads/Zory123/CurriculumMap/total)](https://github.com/zory233/CurriculumMap/releases)
+A visualization solution for curriculum and course dependencies of the Hong Kong University of Science and Technology (HKUST) [![GitHub Repo stars](https://img.shields.io/github/stars/zory233/CurriculumMap?style=social)](https://github.com/zory233/CurriculumMap) [![GitHub all releases](https://img.shields.io/github/downloads/Zory123/CurriculumMap/total)](https://github.com/zory233/CurriculumMap/releases)
 
 A nice web-based re-implementation can be found
 [here](https://github.com/ZHANG-Zhong-HKUST/CurriculumMap-Web).
@@ -11,13 +11,11 @@ A nice web-based re-implementation can be found
 
 1. Download the zip file
    - Windows
-   [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-win.zip?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
+   [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/zory233/CurriculumMap/latest/CurriculumMap-windows.zip)](https://github.com/zory233/CurriculumMap/releases/latest)
    - macOS
-   [![GitHub release (latest by date and
-    asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-mac.dmg?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
+   [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/zory233/CurriculumMap/latest/CurriculumMap-mac.zip)](https://github.com/zory233/CurriculumMap/releases/latest)
    - Linux
-   [![GitHub release (latest by date and
-    asset)](https://img.shields.io/github/downloads/Zory123/CurriculumMap/v1.0/CurriculumMap-linux.zip?color=green)](https://github.com/Zory123/CurriculumMap/releases/tag/v1.0)
+   [![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/zory233/CurriculumMap/latest/CurriculumMap-linux.zip)](https://github.com/zory233/CurriculumMap/releases/latest)
 2. Unzip the zip file.
 3. Go to the executable directory and run the program:
    - For Windows: Run `CurriculumMap-win/CurriculumMap.exe`.
