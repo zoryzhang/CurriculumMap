@@ -62,14 +62,12 @@ def get_content(content):
 
 def get_subject_urls(soup):
     subject_prefix = [ chr(ord('A') + i) for i in range(26)]
-    subjects = []
     subject_urls = []
     for prefix in tqdm(subject_prefix, desc="Crawling Subjects"):
         found_prefix = soup.find_all("li", {"class" : "subject subject-prefix-" + prefix})
         for li in found_prefix:
             subject_urls.append("https://prog-crs.hkust.edu.hk" + str(li.a.get("href")))
-            subjects.append(str(li.div.text))
-    return subjects, subject_urls
+    return subject_urls
 
 def get_courses(subject_urls):
     courses = []
@@ -168,11 +166,12 @@ def process_courses(courses):
 
     return all_row
 
-def output_csv(path, all_row, num_courses, num_subjects):
+def output_csv(path, all_row):
+    all_row_length = len(all_row)
     #supporting Chinese by 'utf-8-sig'
     with open(path,'w',newline = '', encoding="utf-8-sig") as file_csv:
         csv_write = csv.writer(file_csv)
-        csv_stastic_head = [str(num_courses), str(num_subjects),"","","","","","","", "@"]
+        csv_stastic_head = ["Stastic_use_course_num = ", str(all_row_length),"","","","","","","","", "@"]
         csv_write.writerow(csv_stastic_head)
         csv_head = ['Course Code', 'Course Name', 'Course Credits', 'Prerequisite(s)', 'Exclusion(s)','Corequisite(s)','Co-list with','Mode of Delivery','Previous Course Code(s)','Alternate code(s)', "@"]
         csv_write.writerow(csv_head)
@@ -199,18 +198,13 @@ def main():
     html = urllib.request.urlopen(base_url).read()
     soup = BeautifulSoup(html, "lxml")
 
-    subjects, subject_urls = get_subject_urls(soup)
-    num_subjects = len(subjects)
-
-    # print(subject_urls)
-    # print(subjects)
+    subject_urls = get_subject_urls(soup)
 
     courses = get_courses(subject_urls)
-    num_courses = len(courses)
 
-    all_row = process_courses(courses) + [ [s] for s in subjects ]
+    all_row = process_courses(courses)
 
-    output_csv("courses.csv", all_row, num_courses, num_subjects)
+    output_csv("courses.csv", all_row)
 
 if __name__ == '__main__':
     main()

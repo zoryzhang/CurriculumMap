@@ -1,4 +1,4 @@
-﻿1489,54,,,,,,,,@
+﻿Stastic_use_course_num = ,1489,,,,,,,,,@
 Course Code,Course Name,Course Credits,Prerequisite(s),Exclusion(s),Corequisite(s),Co-list with,Mode of Delivery,Previous Course Code(s),Alternate code(s),@
 ACCT 1610,Laws in Society and Business,3 Credit(s),,ACCT 3610,,,,,,This course provides an introduction to law and business society. Topics include general introduction to the concepts in law; an introduction to the Hong Kong legal system under the principle of $one country@ two systems$; copyright law; trademark law; agency law; insolvency law; employment law and business ethics. As Hong Kong is a well-developed business society@ this course is intended to build students# understanding of the relationship between the law and the society and discuss laws in society and business.,@
 ACCT 2010,Principles of Accounting I,3 Credit(s),,,,,[BLD] Blended learning,,,For SB&M students@ and programs that designate the course as a required/specified elective course. This is the first course of the principles of accounting sequence. Introduction to the concepts and principles of financial accounting@ including the analysis@ recording@ and reporting of business transactions and preparation of financial statements.,@
@@ -1513,57 +1513,3 @@ WBBA 2020,Seminars in Asia#s Business,1 Credit(s),WBBA 2010,,,,,,,This is a comp
 WBBA 2030,Effective Communication in Business,3 Credit(s),,,,,,,,Whether making a presentation@ creating and executing an integrated persuasive appeal@ or engaging in group problem solving - students should be able to convey ideas and feelings to their audience clearly@ accurately@ and persuasively. The course is designed to provide second-year WBB students with the necessary communication skills to analyze and convincingly present solutions to the type of real-world problems that they will face as managers in their career. They will learn the necessary skills they need to solve business problems and make professional presentations. At the end of this course@ students will be a more articulate and influential business communicator@ and their existing skills as a strategic thinker@ writer@ and speaker will be sharpened. For WBB students in their second year of study.,@
 WBBA 2080,Doing Business in Asia,3 Credit(s),,WBBA 2010@ WBBA 2020,,,,,,This course explores the way key business and managerial practices play out in an Asian context. To be a successful business leader@ students must possess not only the technical skills and knowledge@ but also be able to deal with regional and international business issues independently. Therefore@ this course provides a big-picture overview of the business framework in Asia@ a platform for students to interact with leading business leaders to learn from their professional experience and obtain first-hand information of the market@ as well as practical training on evaluating challenges and opportunities in doing business in Asia through a cross-disciplinary approach. This course intends to cover topical issues in marketing@ management@ accounting@ information systems@ economics@ finance@ etc. Through experiential exercises@ case studies and class presentations@ students are expected to apply their business knowledge to tackle global and regional business problems with a critical eye.,@
 WBBA 4010,Capstone Project,4 Credit(s),WBBA 2010 AND WBBA 2020,,,,,,,For WBB students only. This course is designed to provide final year WBB students with an opportunity to pursue business studies above and beyond the normal course offerings of HKUST Business School. Students will work on a challenging individual or team capstone project which allows them to 1) conduct empirical research@ and 2) synthesize skills and knowledge learned from the program.,@
-ACCT
-BIBU
-BIEN
-BIPH
-CENG
-CHEM
-CIVL
-COMP
-CORE
-CPEG
-DASC
-DSCT
-ECON
-ELEC
-EMIA
-ENEG
-ENGG
-ENTR
-ENVR
-ENVS
-FINA
-FYTG
-GBUS
-GNED
-HART
-HLTH
-HUMA
-IDPO
-IEDA
-IIMP
-IROP
-ISDN
-ISOM
-LABU
-LANG
-LEGL
-LIFS
-MARK
-MATH
-MECH
-MGMT
-OCES
-PHYS
-PPOL
-RMBI
-SBMT
-SCIE
-SHSS
-SISP
-SOSC
-SUST
-TEMG
-UROP
-WBBA

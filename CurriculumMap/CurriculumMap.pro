@@ -2,9 +2,10 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11 app_bundle
+CONFIG += c++11
+CONFIG -= app_bundle
 CONFIG += sdk_no_version_check
-//CONFIG += debug_and_release debug_and_release_target
+# CONFIG += debug_and_release debug_and_release_target
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
